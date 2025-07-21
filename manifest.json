@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Ad Hider Toggle",
+  "version": "1.0",
+  "description": "Toggle to hide ad-like divs on any page",
+  "permissions": ["scripting", "activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Toggle Ad Hiding"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": ["<all_urls>"]
+}
